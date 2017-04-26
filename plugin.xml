@@ -14,14 +14,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <engine name="cordova" version=">=3.5.0"/>
     </engines>
 
-    <dependency id="cordova-plugin-cocoapod-support"/>
-
     <platform name="ios">
         <config-file parent="FirebaseAppDelegateProxyEnabled" target="*-Info.plist">
             <true />
         </config-file>
-
-        <pods-config ios-min-version="7.0" uses-frameworks="true"/>
 
         <hook type="after_prepare" src="hooks/ios/copy-google-services.js" />
     </platform>
